@@ -34,7 +34,7 @@ export const ChangeName = ({currentName, onUpdateName}: Props) => {
                 Your name is: {optimisticName}
             </Text>
             <Input type="text" name="name" defaultValue={optimisticName} isDisabled={currentName !== optimisticName} />
-            <Button mt={4} w="full" type="submit">
+            <Button mt={4} w="full" type="submit" isLoading={currentName !== optimisticName}>
                 Update Name
             </Button>
         </form>
