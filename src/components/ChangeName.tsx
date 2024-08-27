@@ -1,5 +1,6 @@
 import {Button, Input, Text, useToast} from "@chakra-ui/react";
 import React from "react";
+import {api} from "../util/api.ts";
 
 interface Props {
     currentName: string;
@@ -14,16 +15,11 @@ export const ChangeName = ({currentName, onUpdateName}: Props) => {
         try {
             const newName = formData.get("name") as string;
             setOptimisticName(newName);
-            await new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    Math.random() > 0.5 ? resolve(null) : reject(new Error("Failed to update name"));
-                }, 1000);
-            });
+            await api.call();
             onUpdateName(newName);
         } catch (error: any) {
             toast({
-                title: "Failed to update name",
-                description: error.message,
+                title: error.message,
                 position: "top",
                 status: "error",
                 duration: 5000,

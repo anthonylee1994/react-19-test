@@ -1,22 +1,32 @@
 import React from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {ChakraProvider} from "@chakra-ui/react";
-import {LoginPage} from "./pages/login.tsx";
-import {ChangeNamePage} from "./pages/change-name.tsx";
+import {UseActionStatePage} from "./pages/use-action-state.tsx";
+import {UseOptimisticPage} from "./pages/use-optimistic.tsx";
 import {UsePromisePage} from "./pages/use-promise.tsx";
+import {UseTransitionPage} from "./pages/use-transition.tsx";
+import {IndexPage} from "./pages/index.tsx";
 
 const router = createBrowserRouter([
     {
-        path: "/login",
-        element: <LoginPage />,
+        path: "/",
+        element: <IndexPage />,
     },
     {
-        path: "/change-name",
-        element: <ChangeNamePage />,
+        path: "/use-action-state",
+        element: <UseActionStatePage />,
+    },
+    {
+        path: "/use-optimistic",
+        element: <UseOptimisticPage />,
     },
     {
         path: "/use-promise",
         element: <UsePromisePage />,
+    },
+    {
+        path: "/use-transition",
+        element: <UseTransitionPage />,
     },
 ]);
 
