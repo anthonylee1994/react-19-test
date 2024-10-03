@@ -5,25 +5,23 @@ import {Link} from "react-router-dom";
 export const IndexPage = () => {
     return (
         <Center>
-            <div>
-                <OrderedList fontSize="2xl" lineHeight={2}>
-                    <ListItem>
-                        <Link to="/use-transition">useTransition</Link>
-                    </ListItem>
+            <OrderedList fontSize="2xl" lineHeight={2}>
+                <ListItem>
+                    <Link to="/use-transition">useTransition</Link>
+                </ListItem>
 
-                    <ListItem>
-                        <Link to="/use-action-state">useActionState</Link>
-                    </ListItem>
+                <ListItem>
+                    <Link to="/use-action-state">useActionState</Link>
+                </ListItem>
 
-                    <ListItem>
-                        <Link to="/use-optimistic">useOptimistic</Link>
-                    </ListItem>
+                <ListItem>
+                    <Link to="/use-optimistic">useOptimistic</Link>
+                </ListItem>
 
-                    <ListItem>
-                        <Link to="/use-promise">usePromise</Link>
-                    </ListItem>
-                </OrderedList>
-            </div>
+                <ListItem>
+                    <Link to="/use-promise">usePromise</Link>
+                </ListItem>
+            </OrderedList>
         </Center>
     );
 };

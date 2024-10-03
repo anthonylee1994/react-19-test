@@ -5,7 +5,7 @@ import {UseActionStatePage} from "./pages/use-action-state.tsx";
 import {UseOptimisticPage} from "./pages/use-optimistic.tsx";
 import {UsePromisePage} from "./pages/use-promise.tsx";
 import {UseTransitionPage} from "./pages/use-transition.tsx";
-import {IndexPage} from "./pages/index.tsx";
+import {IndexPage} from "./pages";
 
 const router = createBrowserRouter([
     {
