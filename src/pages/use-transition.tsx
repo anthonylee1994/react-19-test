@@ -1,7 +1,7 @@
+import React from "react";
 import {Alert, AlertIcon, Button, Input} from "@chakra-ui/react";
 import {Center} from "../components/Center";
 import {Paper} from "../components/Paper";
-import React from "react";
 import {api} from "../util/api";
 
 export const UseTransitionPage = () => {
